@@ -1,0 +1,42 @@
+.main-head {
+    font-family: "roboto";
+}
+
+h3{
+    border-left: 4px solid blue;
+    padding: 8px;
+    font-family: "roboto";
+}
+
+img{
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.display-1 {
+    display: block;
+    text-align: center;
+}
+.display-2 {
+    display: flex;
+    justify-content: space-around;
+}
+.display-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+.container-bg {
+    box-shadow: 0 0 20px gray;
+    padding: 28px;
+    border-radius: 20px;
+    border: 2px solid purple;
+    background-image: linear-gradient(to left, blue, skyblue);
+}
+.container-bg:hover {
+    transform: scale(1.01);
+}
+.main-container {
+    background-image: linear-gradient(to left, skyblue, rgb(97, 112, 97));
+    padding: 150px
+}
