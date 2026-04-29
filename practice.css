@@ -1,0 +1,142 @@
+.bg-container {
+    background-color: lightpink;
+    padding: 20px;
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+    margin-right: 700px;
+    margin-top: 10px;
+}
+.direction {
+    display: flex;
+    flex-direction: row;        
+    justify-content: center;    
+    align-items: center; 
+}
+.btn {
+    background-color: orange;
+    width: 100px;
+    height: 40px;
+    border: 0px;
+    border-radius: 8px;
+    color: white;
+    margin-left: 80px;
+}
+nav {
+    margin-right: 18px;
+    text-align: center;
+}
+.main-head {
+    text-align: center;
+    color: rgb(13, 13, 194);
+}
+.hari {
+    border: none;
+    height: 2px;
+    background-color: orange;
+    width: 20%;
+}
+
+.shadow{
+    padding-right: 20px;
+}
+.line {
+    width: 10%;
+    margin-left: 0px;
+    border: none;
+    background-color: orange;
+    height: 2px;
+}
+.direction1 {
+    display: flex;
+    flex-direction: row;        
+    justify-content: center;    
+    align-items: center;    
+    margin: 10px;
+}
+.cart{
+    margin-right: 10px;
+}
+.btn1 {
+    background-color: orange;
+    width: 150px;
+    height: 40px;
+    border: 0px;
+    border-radius: 8px;
+    color: white;
+}
+.full-meter {
+    width: 80%;
+    height: 12%;
+}
+.cart2 {
+    display: flex;
+}
+.bottom-img {
+    width: 70px;
+    height: 70px;
+}
+.botton-dot {
+    font-size: 60px;
+    margin: 0px;
+    color: orange;
+    font-weight: bold;
+}
+.cart4 {
+    margin: 40px;
+    border-radius: 10px;
+    background-color: white;
+}
+.bg-container1 {
+    height: 100%;
+    background-color: lightpink;
+    padding: 20px;
+    margin-top: 10px;
+}
+.botton-cart {
+    text-align: center;
+    padding: 30px;
+}
+.bottom-cart {
+    display: flex;
+}
+.Cart-bottom {
+    display: flex;
+}
+.input {
+    width: 80%;
+    height: 30px;
+    margin-bottom: 15px;
+}
+.below-bottom {
+    text-align: center;
+}
+.footer-section {
+    background-color: rgb(5, 5, 47);
+    height: 100px;
+    margin-top: 20px;
+    margin: 10px;
+    display: flex;
+}
+.icon {
+   color: white;
+   margin: 10px;
+   padding-top: 33px;
+   font-size: 25px;
+}
+.img1 {
+    width: 50px;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: 410px;
+}
+.last-para {
+    color: white;
+    padding-top: 26px;
+    margin-left: 427px;
+}
+.c-olor {
+    color: rgb(13, 13, 194);
+}
