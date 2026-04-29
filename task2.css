@@ -1,0 +1,47 @@
+.head-style {
+    background-color:lightblue;
+    padding: 10px;
+    margin-top: 45px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: blue;
+    border-radius: 4px;
+}
+.dotted {
+    border: 1px dotted black;
+    padding: 30px;
+    margin: 15px;
+}
+.card {
+    border: 1px solid block;
+    margin: 20px;
+}
+.satya {
+    margin-left: 30px;
+}
+.para {
+    color: red;
+}
+.para1 {
+    color: #ff5733;
+}
+.para2 {
+    color: rgb(214, 149, 29);
+}
+.para3 {
+    color: rgb(167, 65, 65);
+}
+.para4 {
+    color: lightgreen;
+}
+.para5 {
+    border: 2px blue solid;
+    padding: 8px;
+    background-color: lightblue;
+}
+.main-head{
+    color: blue;
+}
+.container {
+    padding: 15px;
+}
