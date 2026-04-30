@@ -1,0 +1,73 @@
+img {
+    height: 28vh;
+    margin: 0;
+    width: 22vw;
+    transition: transform 0.3s ease;
+}
+
+.cart {
+    background-color: black;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.haed {
+    color: #ffffff;
+    font-family: "Poppins-Regular", serif;
+    font-size: 17.43px;
+}
+
+.para {
+    color: #ffffffB3;
+    font-size: 15.687px;
+    transition: transform 0.3s ease;
+}
+
+.display {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart-1 {
+    padding: 25px;
+}
+
+.span {
+    color: rgb(247, 110, 17);
+    font-size: 17.43px;
+}
+
+.main-head {
+
+    text-align: center;
+    background: linear-gradient(90deg,
+            black 0%,
+            orange 50%,
+            black 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    color: transparent;
+    animation: moveGradient 3s linear infinite alternate;
+}
+
+.cart:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.para:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+img:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 100% center;
+    }
+}
