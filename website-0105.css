@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    margin: 0;
+}
+.container {
+    background: url("https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/slider-background.jpg") no-repeat center/cover;
+    height: 100vh;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+}
+.top-img {
+    margin: 10px;
+    color: white;
+    width: 98px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 100px;
+}
+.nav-para {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 109px;
+    margin-top: 13px;
+    font: 15px Poppins, sans-serif;
+}
+
+.nav-para:hover{
+    text-decoration: underline;
+}
+.icon-display {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 30px;
+    
+}
+.icon {
+    background-color: #E8D0D6;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    text-align: center;
+    padding: 8px;
+    padding-top:12px;
+    border-radius: 50%;
+    margin-right: 6px;
+    margin-top: 20px;
+}
+
+.slide {
+    animation: slideIn 2s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-90%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+.top-header {
+    display: flex;
+    justify-content: space-between;
+}
+.middle-img {
+    position: absolute;
+    top: 3%;
+    width: 92%;
+    margin: 0;
+    padding:0;
+}
+.middle-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.middle-img-2 {
+    width: 70%;
+    height: 80%;
+}
+
+.history-head {
+    color: #303030;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;   
+    font-size: 60px;
+}
+.middle-para {
+    color:#565656;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    text-align: center;
+}
+.middle-para-1{
+    color:#565656;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-align: center;   
+}
+.btn {
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+  /* <!-- 2nd Top --> */
+.image-box {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    margin: 20px;
+}
+
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.image-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+
+.overlay-text {
+    position: absolute;
+    bottom: 20px;
+    margin-bottom: 170px;
+    font-family: 'Playfair Display' serif;
+    color: white;
+    font-size: 35px;
+    opacity: 0;
+    transition: 0.3s;
+    margin-left: 100px;
+}
+
+
+.image-box:hover::before {
+    background: rgba(0, 0, 0, 0.6); 
+}
+
+.image-box:hover .overlay-text {
+    opacity: 1; 
+}
+.second-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.below-bottum-img:hover{
+    filter: brightness(39%);
+}
+.botton-icon-img {
+    width: 290px;
+    height: 180px;
+    margin-top: 140px;
+}
+h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 25px;
+    font-weight: none;
+}
+.last-sec-cart {
+    text-align: center;
+    padding: 20px;
+}
+
+.flavour-container {
+    display: flex;
+    justify-content: center;
+}
+/* video section */
+.video-section {
+    background-image: url("https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/video-background.jpg");
+    background-size: cover;
+    height: 80vh;
+    transition: 1s;
+    margin-top: 120px;
+    opacity: 1;
+}
+.video-section:hover {
+    transform: scale(1.04);
+    opacity: 0.9;
+}
+
+.card {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+}
+
+video {
+  width: 80%;
+}
+
+/* Chocolate reviews */
+.review-cart {
+    background-image: url("https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/testimonials-background.png?id=74");
+    background-size: cover;
+    height: 40vh;
+    margin-top: 100px;
+    padding: 20px;
+}
+.review-margine {
+    margin-top: 10px;
+}
+.last-symbols-icon {
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 0;
+}
+.icon-container {
+    margin-left: 45%;
+}
+
+/* map section */
+.map-container {
+    position: relative;
+    width: 99vw;
+    height: 80vh;
+    margin-top: 15%;
+}
+/* Form Section */
+.form-card{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+input {
+    width: 98%;
+    height: 30px;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+.form-container {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 648vh;   
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px;
+    width: 60%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+input:focus {
+    outline: 2px solid transparent; 
+    border-bottom: 1px solid black;
+}
+
+.label-card {
+    width: 50%;
+    padding-top: 25px;
+}
+.visit-card {
+    width: 50%;
+    text-align: center;
+    padding:20px;
+}
+.form-head {
+    font-family: 'Playfair Display', serif;
+}
+.form-para {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    color: gray;
+}
+.form-button {
+    background-color: transparent;
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    margin-left: 42%;
+}
+.gallary-img {
+    background-image: url("https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/background-img-2.jpg");
+    width: 100vw;
+    height: 100vh;
+    margin-top: 30px;
+    background-size: cover;
+}   
+.gallary-bottom-image {
+    width: 280px;
+    height: 380px;
+    margin-left: 20px;
+    filter: brightness(100%);
+    transition: 0.3s;
+}
+.gallary-bottom-image:hover {
+    filter: brightness(39%);
+}
+
+/* menu crad */
+.delicious-card {
+    padding-top: 590px;
+    padding-left: 180px;
+}
+.delicious-card-2 {
+    padding-left: 180px;
+}
+
+/* footer section */
+.footer-section {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/footer-img.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    margin-top: 890px;
+    padding: 70px;
+}
+.alomond{
+    position: absolute; 
+    bottom: 75%;
+    left: 78%;
+    width: 80px;
+    height: 80px;
+}
+.alomond-1 {
+    position: absolute; 
+    bottom: 85%;
+    left: 70%;
+    width: 50px;
+    height: 80px;
+}
+.alomond-2 {
+    width: 50px;
+    height: 80px;   
+}
+.alomond-3 {
+    position: absolute;
+    top:60%;
+    bottom: 20%;
+    left: -1%;
+    width: 120px;
+    height: 120px;
+    right: 95%;
+}
+.alomond-4 {
+    position: absolute;
+    top: 85%;
+    right: 90%;
+    width: 100px;
+    height: 100px;
+}
+.leaf {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    right: 60%;
+}
+.leaf-slide {
+    animation: sliding 2s;
+}
+@keyframes sliding{
+    from {
+        transform: translateY(-100%) rotate(0deg);
+    }
+    to {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+.italic {
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
