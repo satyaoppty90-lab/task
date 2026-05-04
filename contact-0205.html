@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Example</title>
+    <link rel="stylesheet" href="website-0105.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        body {
+            margin: 0;
+        }
+
+        .top-img {
+            margin: 10px;
+            color: white;
+            width: 150px;
+        }
+
+        /* map section */
+        .map-container {
+            position: relative;
+            width: 99vw;
+            height: 80vh;
+            margin: 0;
+        }
+
+        i {
+            background-color: #E8D0D6;
+            width: 20px;
+            height: 20px;
+            font-size: 15px;
+            text-align: center;
+            padding: 8px;
+            padding-top: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+            margin-top: 20px;
+        }
+
+        /* Form Section */
+        .form-container {
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            top: 82vh;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 40px;
+            width: 60%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .label-card {
+            width: 50%;
+            padding-top: 25px;
+        }
+
+        .visit-card {
+            width: 50%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .form-head {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .form-para {
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            color: gray;
+        }
+
+        .form-button {
+            background-color: transparent;
+            border: 1px solid black; 
+            width: 100px;
+            height: 30px;
+            margin-left: 42%;
+        }
+
+        .gallary-img {
+            background-image: url("https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/contact-us-img-1.png");
+            width: 60vw;
+            height: 60vh;
+            margin-top:18%;
+            margin-left: 18%;
+            background-size: cover;
+        }
+
+
+        /* footer section */
+        .footer-section {
+            background-image: url("https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/footer-img.jpg");
+            width: 90%;
+            padding: 70px;
+            margin-top: 40px;
+        }
+    </style>
+
+    <div>
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d243645.4156725853!2d78.44108889999998!3d17.4137254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1777696894481!5m2!1sen!2sin"
+                class="map-container" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- Form Section -->
+        <div>
+            <div class="form-container">
+                <div class="label-card">
+                    <input type="text" placeholder="Name*" />
+                    <br />
+                    <br />
+                    <input type="email" placeholder="Email*" />
+                    <br />
+                    <br />
+                    <input type="text" placeholder="Message" />
+                    <br />
+                    <br />
+                    <button class="form-button"> S E N D </button>
+                </div>
+                <div class="visit-card">
+                    <h2 class="form-head"> <span style="font-style: italic; font-weight: bold;">Visit</span> our shops
+                    </h2>
+                    <p class="form-para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut
+                        labore.
+                        <br />
+                        <br />
+                        09:00-19h Monday – Friday
+                        75-11 Jewett Ave Jersey City, NJ 07304 USA
+                        + (1) 555 678 786
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- delicious-card -->
+        <div class="gallary-img">
+
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <img class="top-img" src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/logo.png" />
+        <p style="color: white; text-align: center;">
+            © Copyright Qode Interactive — All Rights Reserved <br />
+            Proudly Made For You.</p>
+        <div>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </div>
+
+</body>
+
+</html>
