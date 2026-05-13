@@ -1,0 +1,95 @@
+body {
+    background-color: black;
+    height: 100%;
+}
+
+.cart-one {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12%;
+}
+
+.image-box {
+    width: fit-content;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-one {
+    height: 280px;
+}
+
+.image-box:hover .img-one {
+    filter: blur(2px);
+}
+
+.para {
+    color: #ffffff;
+    width: 215px;
+    position: absolute;
+    top: 130px;
+    padding: 10px;
+    transition: 0.5s;
+    padding-bottom: 50px;
+    font-size: 20px;
+}
+
+.para-one {
+    position: absolute;
+    top: 250px;
+    color: rgb(253, 168, 9);
+    padding-left: 10px;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+
+.image-box:hover .para-one {
+    transform: translateY(-10px);
+    opacity: 1;
+}
+
+.image-box:hover .para {
+    transform: translateY(-10px);
+    background-color: rgba(7, 0, 0, 0.7);
+    backdrop-filter: blur(0.5px);
+}
+
+.icon {
+    color: rgb(253, 168, 9);
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.slide-one {
+    position: absolute;
+    top: 450px;
+    left: 900px;
+    animation: slider 3s infinite ease;
+}
+
+@keyframes slider {
+    from {
+        transform: translateY(50px) rotate(45deg) scale(1.2);
+    }
+
+    to {
+        transform: translateX(50px) rotate(45deg) scale(1.2);
+    }
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    animation: slider 3s infinite ease;
+}
+
+@keyframes slider {
+    from {
+        transform: translateX(50px) rotate(45deg) scale(1.2);
+    }
+
+    to {
+        transform: translatey(50px) rotate(45deg) scale(1.2);
+    }
+}
