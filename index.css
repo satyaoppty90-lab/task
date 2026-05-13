@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+}
+
+.top-bg-container {
+    background-image: url("https://bridge433.qodeinteractive.com/wp-content/uploads/2021/05/slider-background-1.jpg");
+    height: 100vh;
+    background-size: cover;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+}
+/* /////////// */
+.top-nav-cantainer {
+    display: flex;
+    position: fixed;
+    padding-top: 20px;
+    height: 10vh;
+    width: 100vw;
+}
+.bridge-img {
+    margin-left: 50px;
+}
+
+.home {
+    border-bottom: 1px solid orange;
+    border-left: 1px solid orange;
+    padding: 8px;
+    line-height: 10px;
+}
+
+.about {
+    padding: 6px;
+}
+
+.about:hover {
+    border-bottom: 1px solid orange;
+    border-left: 1px solid orange;
+    padding: 8px;
+}
+
+.blog {
+    padding: 6px;
+}
+
+.blog:hover {
+    border-bottom: 1px solid orange;
+    border-left: 1px solid orange;
+    padding: 8px;
+}
+
+.Service {
+    padding: 6px;
+}
+
+.Service:hover {
+    border-bottom: 1px solid orange;
+    border-left: 1px solid orange;
+    padding: 8px;
+}
+
+.faq {
+    padding: 6px;
+}
+
+.faq:hover {
+    border-bottom: 1px solid orange;
+    border-left: 1px solid orange;
+    padding: 8px;
+}
+
+.demains {
+    padding: 6px;
+}
+
+.demains:hover {
+    border-bottom: 1px solid orange;
+    border-left: 1px solid orange;
+    padding: 8px;
+}
+
+.contact {
+    padding: 6px;
+}
+
+.contact:hover {
+    border-bottom: 1px solid orange;
+    border-left: 1px solid orange;
+    padding: 8px;
+}
+.menu-box {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-left: 200px;
+}
+.menu-icon {
+    color: #ffffff;
+    font-size: 29px;
+}
+
+.menu-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 2%;
+    padding: 12px;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+}
+
+.menu-icon::after {
+    content: "";
+    position: absolute;
+    bottom: 28px;
+    padding: 12px;
+    right: 24px;
+    width: 28px;
+    height: 2%;
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
+}
+/* ///////// */
+.nav-con {
+    margin-left: 170px;
+    margin-top: 4px;
+}
+
+.nav-con a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 14px;
+}
+.bridge-logo{
+    margin-left: 45px;
+}
+
+.middle-section {
+    width: 50%;
+    margin-top: 100px;
+    padding-left: 15px;
+}
+
+.analistic {
+    color: #F57D05;
+    font-family: "Source code pro";
+}
+
+.top-head {
+    color: #ffffff;
+    font-size: 48px;
+    font-family: "Source Code Pro";
+    font-weight: 0;
+}
+
+.read-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    padding-left: 50px;
+    font-size: 16px;
+    position: relative;
+    font-family: "Source Code Pro", monospace;
+}
+
+.read-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid orange;
+    border-right: 1px solid orange;
+    transition: 1s;
+}
+.read-btn:hover::before{
+    height: 100%;
+}
+
+.read-btn::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 90%;
+    height: 50%;
+    border-bottom: 1px solid orange;
+    border-left: 1px solid orange;
+    transition: 1s;
+}
+.read-btn:hover::after{
+    height: 100%;
+}
+.bottom-one {
+    color: gray;
+}
+
+.bottom-one::after {
+    content: "";
+    position: absolute;
+    top: 94%;
+    color: gray;
+    left: 10%;
+    width: 220px;
+    height: 16px;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+}
+
+.bottom-one:hover::after {
+    color: #ffffff;
+    border-bottom: 2px solid #F57D05;
+    border-left: 2px solid #F57D05;
+}
+
+.bottom-second {
+    color: gray;
+}
+
+.bottom-second::after {
+    content: "";
+    position: absolute;
+    top: 94%;
+    left: 41%;
+    width: 220px;
+    height: 16px;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+}
+
+.bottom-second:hover::after {
+    color: #ffffff;
+    border-bottom: 2px solid #F57D05;
+    border-left: 2px solid #F57D05;
+}
+
+
+.bottom-three {
+    color: gray;
+}
+
+.bottom-three::after {
+    content: "";
+    position: absolute;
+    left: 74%;
+    top: 94%;
+    width: 220px;
+    height: 16px;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+}
+
+.bottom-three:hover::after {
+    color: #ffffff;
+    border-bottom: 2px solid #F57D05;
+    border-left: 2px solid #F57D05;
+}
+.para-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.second-section {
+    background-color: #121212;
+    padding-bottom: 200px;
+}
+
+.image-one {
+    margin: 40px;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+
+.image-one:hover {
+    filter: sepia(1) saturate(25);
+}
+
+.section-second {
+    display: flex;
+    margin-top: 100px;
+    padding: 30px;
+}
+
+.heading-one {
+    color: #ffffff;
+    font-size: 45px;
+    font-family: "Source Code Pro";
+}
+
+.logo-one {
+    width: 60px;
+    height: 60px;
+    margin-top: 40px;
+    margin-right: 20px;
+
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 30px;
+    font-family: "Source Code Pro"
+}
+
+.para-one {
+    color: #999;
+    font-size: 20px;
+}
+
+.section-second-1 {
+    display: flex;
+    padding: 30px;
+}
+
+.logo-second {
+    width: 60px;
+    height: 60px;
+    margin-top: 38px;
+    margin-right: 20px;
+}
+
+.second-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.thrid-card {
+    display: flex;
+    padding: 30px;
+}
+
+.thrid-sub-cart {
+    margin-top: 100px;
+}
+
+.thrid-head {
+    font-size: 50px;
+    color: #ffffff;
+    font-family: "Source Code Pro";
+}
+
+.third-para {
+    color: #999;
+    font-size: 18px;
+}
+
+.third-img {
+    width: 60vw;
+    height: 100vh;
+}
+
+.fourth-bottom {
+    color: gray;
+    margin-left: 15px;
+    padding: 8px;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+}
+
+.fourth-first-cart {
+    display: flex;
+}
+
+.pair-cart {
+    margin: 10px;
+
+}
+
+.fourth-logo-one {
+    width: 50px;
+    height: 50px;
+}
+
+.fourth-head {
+    color: #ffffff;
+    margin: 0;
+    font-family: "Source Code Pro";
+    font-size: 25px;
+    font-weight: 0;
+}
+
+.fourth-para {
+    color: #F57D05;
+    font-family: "Source Code Pro";
+}
+
+.fourth-container {
+    display: flex;
+    padding: 30px;
+    justify-content: space-around;
+}
+
+.fourth-cart-one {
+    padding: 20px;
+}
+
+.fifth-container {
+    background-image: url("https://bridge433.qodeinteractive.com/wp-content/uploads/2021/05/section-background-image-1.jpg");
+    height: 100%;
+    padding: 30px;
+    background-size: cover;
+    padding-bottom: 200px;
+}
+
+.fifth-cart {
+    margin-top: 240px;
+    width: 50vw;
+}
+
+.fifth-head {
+    font-size: 60px;
+    color: #ffffff;
+    font-family: "Source Code Pro";
+}
+
+.para-one-fifth {
+    color: #999;
+    font-size: 18px;
+}
+
+.sixth-cart {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.sixth-head-top {
+    color: #ffffff;
+    font-size: 50px;
+    font-family: "Source Code Pro";
+}
+
+.sixth-img {
+    width: 300px;
+    height: 250px;
+}
+
+.sixth-container {
+    background-color: #171717;
+    padding: 30px;
+}
+
+.para-one-sixth {
+    color: #999;
+    font-size: 15px;
+    font-family: "Source Code Pro" sans-serif;
+}
+
+.sixth-head {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "Source Code Pro";
+}
+
+.sixth-sub-cart {
+    display: flex;
+}
+
+.para-one-sixth-hover {
+    color: #999;
+    font-size: 15px;
+    padding: 8px;
+    width: 300px;
+    font-family: "Source Code Pro" sans-serif;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+}
+
+.para-one-sixth-hover:hover {
+    color: #ffffff;
+    border-bottom: 1px solid #F57D05;
+    border-left: 1px solid #F57D05;
+}
+
+
+.icon-color {
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.footer-section {
+    padding-bottom: 100px;
+    background-color: #121212;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-display {
+    display: flex;
+}
+
+.footer-icon {
+    color: #ffffff;
+    margin: 10px;
+}
+
+.hover-para {
+    color: #999;
+}
+
+.hover-para:hover {
+    color: #ffffff;
+}
+.last-footer {
+    padding: 10px;
+    background-color: #171717;
+    text-align: center;
+}
