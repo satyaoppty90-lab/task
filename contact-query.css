@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500&display=swap');
+
+body {
+    margin: 0;
+}
+
+/* nav Section */
+.navbar {
+    background: linear-gradient(120deg,
+            #000000,
+            #121212,
+            #1e1e1e);
+    height: 14vh;
+    z-index: 1;
+    position: fixed;
+}
+
+.header-section {
+    background-image:
+        linear-gradient(rgba(8, 8, 8, 0.75),
+            rgba(11, 11, 11, 0.75)),
+        url("https://images.pexels.com/photos/13660691/pexels-photo-13660691.jpeg");
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    padding-bottom: 160px;
+    padding-top: 100px;
+}
+
+.nav-name {
+    margin-right: 40px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.header-section-top {
+    background-image: url("https://bridge511.qodeinteractive.com/wp-content/uploads/2024/05/p6-img-01.jpg");
+    height: 85vh;
+    width: 100%;
+    background-size: cover;
+}
+
+.header-heading {
+    font-size: 80px;
+    color: #ffffff;
+    padding-top: 20%;
+    padding-left: 30px;
+    transition: 1s;
+    animation: sliding 4s ease infinite;
+    text-align: center;
+}
+
+@keyframes sliding {
+    0% {
+        transform: translateY(0);
+        color: orange;
+        text-shadow: 2px 2px 10px orange;
+    }
+
+    50% {
+        transform: translateY(30px) scale(1.06) skewY(-10deg);
+        text-shadow: 2px 2px 10px red;
+        color: red;
+    }
+
+    100% {
+        transform: translateY(0);
+        text-shadow: 2px 2px 10px greenyellow;
+        color: greenyellow;
+    }
+}
+
+.send-btn {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid gray;
+    background-color: transparent;
+    color: #ffffff;
+    transition: 1s;
+}
+
+.send-btn:hover {
+    box-shadow: 2px 2px 10px #B5B4B4;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+textarea {
+    background-color: transparent;
+    outline: none;
+    color: #ffffff;
+    padding: 10px;
+    border: 2px dotted gray;
+    width: 100%;
+    transition: 1s;
+}
+
+textarea:hover {
+    box-shadow: 2px 2px 20px gray;
+    transform: scale(1.04);
+    border-radius: 10px;
+}
+
+.text-area {
+    margin-top: 100px;
+}
+
+input {
+    width: 50%;
+    height: 50px;
+    padding: 10px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: 1s;
+}
+
+input:hover {
+    box-shadow: 2px 2px 20px gray;
+    transform: scale(1.04);
+    border-radius: 10px;
+}
+
+.contact-section {
+    width: 35%;
+}
+
+.input-sec {
+    display: flex;
+    gap: 11px;
+    margin-top: 10px;
+}
+
+.footer-cart {
+    margin-top: 90px;
+    width: 28%;
+}
+
+.heading-color {
+    color: rgb(206, 176, 10);
+    font-family: "Cinzel";
+}
+
+.para-hover {
+    color: gray;
+    transition: 0.5s;
+}
+
+.para-hover:hover {
+    transform: translateY(-10px);
+    text-shadow: 2px 2px 9px red;
+}
+
+.footer-icon {
+    font-size: 30px;
+    padding: 6px;
+    color: white;
+    transition: 1s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-background {
+    background: linear-gradient(135deg,
+            #000000,
+            #0f172a,
+            #1e293b);
+    padding: 30px;
+}
+
+.footer-img {
+    width: 150px;
+    height: 80px;
+    margin-bottom: 25px;
+}
+
+.footer-para {
+    color: #ffffff;
+}
+
+.footer-icon {
+    font-size: 30px;
+    padding: 6px;
+    color: white;
+    transition: 1s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.footer-icon:hover {
+    transform: translateY(-10px);
+    color: blue;
+    text-shadow: 2px 2px 2px gray;
+}
+
+span {
+    color: #ffffff;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+.footer-display {
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+}
+
+.display-footer {
+    width: 28%;
+}
+
+input {
+    background-color: #ACABAB;
+    width: 100%;
+    border: none;
+    height: 50px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.footer-theree {
+    width: 28%;
+}
+
+.final-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-head {
+    font-size: 40px;
+    font-family: "Cinzel";
+}
+
+.display {
+    display: none;
+}
+
+
+
+
+
+/* Tablet */
+@media screen and (max-width : 768px) {
+    .header-heading {
+        padding-top: 36%;
+    }
+
+    .contact-container {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .contact-section {
+        width: 90%;
+    }
+
+    .footer-cart {
+        width: 40%;
+    }
+
+    .final-section {
+        align-items: center;
+    }
+
+    .footer-display {
+        width: 30%;
+    }
+
+    .display-footer {
+        width: 30%;
+    }
+
+    .footer-theree {
+        width: 30%;
+    }
+}
+
+/* mobile */
+
+@media screen and (max-width : 576px) {
+
+    .header-heading {
+        padding-top: 45%;
+    }
+
+    .display {
+        display: block;
+        z-index: 99999;
+    }
+
+    .hangburger {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 12px 16px;
+        border-radius: 12px;
+        color: white;
+        font-size: 23px;
+    }
+
+    .hangburger a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 10px 0;
+    }
+
+    .hangburger a:hover {
+        color: orange;
+    }
+
+    details summary {
+        list-style: none;
+    }
+
+    .mobile-view {
+        display: none;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .text-area {
+        width: 90%;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .contact-section {
+        width: 90%;
+    }
+
+    .footer-cart {
+        width: 90%;
+    }
+
+    .final-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-display {
+        width: 90%;
+    }
+
+    .display-footer {
+        width: 90%;
+    }
+
+    .footer-theree {
+        width: 90%;
+    }
+}
