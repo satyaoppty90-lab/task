@@ -1,0 +1,47 @@
+.ul-list {
+    list-style-type: circle;
+    padding-top: 90px;
+}
+.flex-display{
+    display: flex;
+}
+.contact-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    background-color: rgb(234, 201, 201);
+    padding-bottom: 50px;
+}
+.footer-container {
+    margin-top: 90px;
+    background-color: #67797E;
+    padding: 20px;
+}
+
+.icon {
+    font-size: 30px;
+    color: #88a5ad;
+    margin-left: 10px;
+}
+
+.foot-head {
+    color: white;
+}
+
+.footer-bottom-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-para {
+    color: #88a5ad;
+}
+
+.final-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-para:hover{
+    color: white;
+}

@@ -1,0 +1,130 @@
+.ul-list {
+    list-style-type: circle;
+    padding-top: 90px;
+}
+
+.diplay-hollow {
+    margin-top: 110px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.red-heading {
+    font-size: 50px;
+}
+
+.red-para {
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.footer-container {
+    margin-top: 90px;
+    background-color: #67797E;
+    padding: 20px;
+}
+
+.icon {
+    font-size: 30px;
+    color: #88a5ad;
+    margin-left: 10px;
+}
+
+.foot-head {
+    color: white;
+}
+
+.footer-bottom-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-para {
+    color: #88a5ad;
+}
+
+.final-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hover-effect {
+    transition: 1s;
+}
+
+.hover-effect:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+}
+
+.hover-effect:hover .card-title {
+    color: white;
+}
+
+.hover-effect:hover .card-text {
+    color: white;
+}
+
+.hover-effect-one {
+    transition: 1s;
+}
+
+.hover-effect-one:hover {
+    background: linear-gradient(135deg, #232526, #414345);
+    color: white;
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+}
+
+.hover-effect-one:hover .card-title {
+    color: white;
+}
+
+.hover-effect-one:hover .card-text {
+    color: white;
+}
+
+.hover-effect-two {
+    transition: 1s;
+}
+
+.hover-effect-two:hover {
+    background: linear-gradient(135deg,
+            #ff6b6b,
+            #feca57,
+            #48dbfb,
+            #1dd1a1);
+    color: white;
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+}
+
+.hover-effect-two:hover .card-title {
+    color: black;
+}
+
+.hover-effect-two:hover .card-text {
+    color: black;
+}
+.hover-effect-three {
+    transition: 1s;
+}
+.hover-effect-three:hover {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    color: white;
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+}
+.hover-effect-three:hover .card-title {
+    color: black;
+}
+
+.hover-effect-three:hover .card-text {
+    color: black;
+}
+.footer-para:hover{
+    color: white;
+}
