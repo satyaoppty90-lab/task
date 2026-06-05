@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .bg-container {
+            background-color: navy;
+            padding: 20px;
+        }
+
+        .heading {
+            text-align: center;
+            color: white;
+        }
+
+        .style-input {
+            width: 60vw;
+            height: 6vh;
+            padding-left: 10px;
+            margin-top: 5px;
+            border: 0;
+            outline: none;
+        }
+
+        .language {
+            color: gray;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .cal-button {
+            width: 150px;
+            height: 38px;
+            border: 0;
+            background-color: purple;
+            font-weight: bold;
+            color: white;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+
+        .cal-button:hover {
+            background-color: blue;
+            transform: rotate(6deg);
+            color: black;
+            box-shadow: 2px 2px 10px gray;
+        }
+
+        .image {
+            width: 420px;
+            height: 400px;
+        }
+
+        .para {
+            color: white;
+        }
+        .direction{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+
+
+    <div class="bg-container">
+        <h1 class="heading"> Exams result 📝 </h1>
+
+        <div class="direction">
+            <div>
+                <label class="language" for="name"> Name Of Student </label>
+                <br />
+                <input placeholder="Enter Your Name Here" class="style-input" id="name" type="text" />
+                <br />
+                <br />
+
+
+                <label class="language" for="telugu"> Telugu </label>
+                <br />
+                <input placeholder="Enter The Marks Here" class="style-input" id="telugu" type="text" />
+                <br />
+                <br />
+
+
+                <label class="language" for="english"> English </label>
+                <br />
+                <input placeholder="Enter The Marks Here" class="style-input" id="english" type="text" />
+                <br />
+                <br />
+
+
+                <div style="text-align: center;">
+                    <button class="cal-button" id="Calculate" onclick="calculator()"> Calculate </button>
+                </div>
+                <p class="para" id="nameofstu"></p>
+                <p class="para" id="total-marks"> </p>
+                <p class="para" id="Average-marks"> </p>
+                <p class="para" id="Bonus-marks"> </p>
+                <p class="para" id="Sub-Grater"> </p>
+                <p class="para" id="equal-marks"> </p>
+                <p class="para" id="Increament-marks"> </p>
+                <p class="para" id="result"> </p>
+                <p class="para" id="grades-student"> </p>
+            </div>
+
+            <div>
+                <img class="image" id="image"
+                src="https://images.openai.com/static-rsc-4/SLJx-92j-4E-eq-fDv_L_D3CAxfCtAja8_NsrD8w-a5c4Ult3j8g16KbYe4dT1Vxes2w9GUBkdiYVko5BZarCrldLp1Qz7mhwhw0exY2XC0USb0PfpCSvLBtFa_tmNkMJargPU3vXhuKAj4_yPqoGIjisoTcQnxEignfKeQ5hC9X2rY_Q5isrHP7bPJJydRP?purpose=inline"/>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        let totalMarks = document.getElementById("total-marks");
+        let averageMarks = document.getElementById("Average-marks");
+        let bonusMarks = document.getElementById("Bonus-marks");
+        let greater = document.getElementById("Sub-Grater");
+        let equalmark = document.getElementById("equal-marks");
+        let incdecMarks = document.getElementById("Increament-marks");
+        let result = document.getElementById("result");
+        let studentGrades = document.getElementById("grades-student");
+        let studentname = document.getElementById('nameofstu');
+        let image = document.getElementById("image");
+
+        function calculator() {
+
+            let name = document.getElementById("name").value;
+            let subOne = parseInt(document.getElementById("telugu").value);
+            let subTwo = parseInt(document.getElementById("english").value);
+            
+
+            // name of student
+            studentname.textContent = "Name of the student = " + name;
+
+            // Image 
+            image.src ="https://images.openai.com/static-rsc-4/BoLk1Gn8oegiK84x9A4iHwW5asmRRBcF1r86DoNFhOPEU_1RMQ3BjyCm7KuuMEChxYj3AZycZ2rELhLNBy4mo7N3MUutrS3mZ45Mb0dQ8anj47u_ltdOz7NXKHhWmGilJOF_3OCxc3RCI-wgpPC5F_M5RnC6yYBXJggqYdtbrgBR_XTduaUmGBeAYigRufzX?purpose=inline";
+
+            // Total Marks
+            let total = subOne + subTwo;
+            totalMarks.textContent = "Sum Of marks = " + total;
+
+            // Percentage Marks
+            let Average = (total / 200) * 100;
+            averageMarks.textContent = "Percentage of Marks = " + Average + "%";
+
+            // Add 5 bonus marks using
+            let bonus = total;
+            bonus += 5;
+            bonusMarks.textContent = "After Adding Bonus 5 Marks To The Student = " + bonus;
+
+            // Comparison Operators
+            // Check if Subject 1 marks are greater than Subject 2 marks (>)
+            if (subOne > subTwo) {
+                greater.textContent = "Subject 1 marks is greater Than Subject 2 marks = " + subOne;
+            }
+            else {
+                greater.textContent = "Subject 2 marks is greater Than Subject 1 marks = " + subTwo;
+            }
+            // Check if both marks are equal (==)
+            if (subOne === subTwo) {
+                equalmark.textContent = "Both sunOne and subTwo marks are equal";
+            }
+            // Check if at least one subject has marks greater than 90 (||)
+            if (subOne > 90 || subTwo > 90) {
+                total++;
+                incdecMarks.textContent = "If any subject got more than 90 marks 1mark will be added = " + total;
+            }
+            else {
+                total--;
+                incdecMarks.textContent = "If any subject got less than 90 marks 1mark will be deducted = " + total;
+            }
+
+            // Ternary Operator
+
+            let finalResult = Average >= 35 ? "Pass" : "fail"
+            result.textContent = "The result of the person = " + finalResult;
+
+            // grade of the student 
+            let grade;
+
+            if (Average >= 90) {
+                grade = "A Grade";
+            }
+            else if (Average >= 75) {
+                grade = "B Grade";
+            }
+            else if (Average >= 60) {
+                grade = "C Grade";
+            }
+            else if (Average >= 35) {
+                grade = "D Grade";
+            }
+            else {
+                grade = "Fail"
+            }
+
+            studentGrades.textContent = "Grade of the student = " + grade;
+        }
+
+
+    </script>
+</body>
+
+</html>
