@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="Cartcontainer">
+    </div>
+
+
+    <style>
+        .demo {
+            background-color: orange;
+            border-width: 0px;
+            width: 100px;
+            height: 30px;
+            color: black;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        .demo1 {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+
+
+
+    <script>
+
+        let headElement = document.createElement("h1");
+        headElement.textContent = "Welcome to Javascript Classes";
+        let container = document.getElementById("Cartcontainer");
+        container.appendChild(headElement);
+        console.log(container);
+        let button = document.createElement("button");
+        button.textContent = "Click Me";
+
+        let buttonTwo = document.createElement("button");
+        buttonTwo.textContent = "Remove style";
+        container.appendChild(buttonTwo);
+
+        button.onclick = function () {
+            headElement.textContent = "This is DOM Manupulation Session";
+            headElement.classList.add("demo1");
+            button.textContent = "JS Class";
+            button.classList.add("demo");
+            buttonTwo.classList.add("demo");
+            para.textContent = "We are happy train you..."
+        }
+
+
+
+        buttonTwo.onclick = function () {
+            headElement.classList.remove("demo1");
+            button.classList.remove("demo");
+            buttonTwo.classList.remove("demo");
+            headElement.textContent = "Welcome to Javascript Classes";
+            para.textContent = "Welcome oppty world!...";
+        }
+
+        container.appendChild(button);
+        let para = document.createElement("p");
+        para.textContent = "Welcome oppty world!...";
+        container.appendChild(para);
+
+
+        //JavaScript Arithmetic Operators
+        let a = 5;
+        let b = 15;
+        // Addition
+        let c = a + b;
+        console.log("Addition :" + c);
+        // substraction
+        let d = b - a;
+        console.log("substraction :" + d);
+        // multiplication
+        let e = a * b;
+        console.log("multiplication :" + e);
+        // Exponentiation
+        let f = a ** b;
+        console.log("Exponentiation :" + f);
+        //Division
+        let g = a / b;
+        console.log("Division :" + g);
+        //Modulus 
+        let h = a % b;
+        console.log("Modulus :" + h);
+        //Increment
+        let i = a++;
+        console.log("Increment :" + i);
+        //Decrement
+        let j = a--;
+        console.log("Decrement :" + j);
+
+
+
+
+        // Arrays 
+        let arr = [90, "two", 9.8, false];
+        console.log(arr);
+
+        // Arrays Modification
+        arr[1] = 2;
+        console.log(arr);
+
+        // Adding values in array
+        let arr1 = arr.push("satya");
+        arr.push("vinay")
+
+        // removing value from array
+        let pop = arr.pop();
+        console.log(arr);
+
+
+        // Indexing 
+        let arr2 = ["banana", 124, true]
+        console.log(typeof (arr2[0]))
+        console.log(typeof (arr2[1]))
+        console.log(typeof (arr2[2]))
+        console.log(arr2);
+
+        // Loops
+        for (let i of arr2) {
+            console.log(i)
+        }
+        // Objects
+        let hero = {
+            name: "satya",
+            age: 24,
+            designation: "software"
+        }
+        console.log("My Name is " + hero.name + " " + "My Age is " + hero.age + "  " + "and My designation is " + hero.designation);
+
+
+
+        // 1. Sum of the values of an array
+        let array = [12, 1, 2, 4, 1];
+        let adding = 0;
+        for (let values of array) {
+            adding += values
+        }
+        console.log("Sum Of Array  " + adding);
+
+        //2.Log the values from each object
+        let person = [
+            {
+                name: "Printing Press",
+                age: 22,
+                city: "Hyderabad"
+            },
+            {
+                name: "Light Buld",
+                age: 22,
+                city: "Hyderabad"
+            },
+            {
+                name: "Telephone",
+                age: 22,
+                city: "Hyderabad"
+            },
+            {
+                name: "Aeroplane",
+                age: 22,
+                city: "Hyderabad"
+            },
+            {
+                name: "Computer",
+                age: 22,
+                city: "Hyderabad"
+            },
+        ]
+
+        for (let test of person) {
+            let practice = test.name;
+            console.log(practice);
+        }
+
+        // Ellegivility to vote
+        let Voliting = [
+            {
+                name: "satya",
+                age: 12,
+            },
+            {
+                name: "ramu",
+                age: 20,
+            },
+            {
+                name: "srinadh",
+                age: 15,
+            },
+            {
+                name: "sridhar",
+                age: 22,
+            },
+            {
+                name: "sudharshan",
+                age: 16,
+            },
+        ]
+
+
+        for (let vote of Voliting) {
+            let elible = vote.age;
+            if (elible > 18) {
+                console.log(vote.name);
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
