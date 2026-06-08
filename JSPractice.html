@@ -8,211 +8,187 @@
 </head>
 
 <body>
-    <div id="Cartcontainer">
-    </div>
-
-
-    <style>
-        .demo {
-            background-color: orange;
-            border-width: 0px;
-            width: 100px;
-            height: 30px;
-            color: black;
-            border-radius: 10px;
-            margin-left: 20px;
-        }
-
-        .demo1 {
-            color: blue;
-            text-decoration: underline;
-        }
-    </style>
-
-
-
     <script>
+        // let trafficSignal = "Red";
+        // if (trafficSignal === "Red") {
+        //     console.log("Stop Immediately")
+        // }
+        // else if (trafficSignal === "Yellow") {
+        //     console.log("Slow down and prepare to stop")
+        // }
+        // else {
+        //     console.log("Go Safely")
+        // }
 
-        let headElement = document.createElement("h1");
-        headElement.textContent = "Welcome to Javascript Classes";
-        let container = document.getElementById("Cartcontainer");
-        container.appendChild(headElement);
-        console.log(container);
-        let button = document.createElement("button");
-        button.textContent = "Click Me";
 
-        let buttonTwo = document.createElement("button");
-        buttonTwo.textContent = "Remove style";
-        container.appendChild(buttonTwo);
 
-        button.onclick = function () {
-            headElement.textContent = "This is DOM Manupulation Session";
-            headElement.classList.add("demo1");
-            button.textContent = "JS Class";
-            button.classList.add("demo");
-            buttonTwo.classList.add("demo");
-            para.textContent = "We are happy train you..."
+
+
+        // 1) for entry pass
+        // has ID
+        // has entry pass ticket
+        // check age
+
+        //type one Only using (AND) oparator
+        // let hasId = true;
+        // let hasEntryPass = true;
+        // let age = 19;
+        // let check = age >= 18;
+        // if(hasId && hasEntryPass && check){
+        //     console.log("Person Can Able To Access")
+        // }
+        // else {
+        //     console.log("Person Don't have Access");
+        // }
+
+
+        //type one Only using (OR) oparator
+        // let hasId = false;
+        // let hasEntryPass = false;
+        // let age = 1;
+        // let check = age >= 18;
+        // if(hasId || hasEntryPass || check){
+        //     console.log("Person Can Able To Access")
+        // }
+        // else {
+        //     console.log("Person Don't have Access");
+        // }
+
+        //type one Only using (AND & OR) oparator
+        // let hasId = true;
+        // let hasEntryPass = false;
+        // let age = 19;
+        // let check = age >= 18;
+        // if((hasId && hasEntryPass) || check){
+        //     console.log("Person Can Able To Access")
+        // }
+        // else {
+        //     console.log("Person Don't have Access");
+        // }
+
+
+
+
+
+
+
+        // 2) is weekend
+        // is holiday
+        // has leave approved
+
+        //type one Only using (AND) oparator
+        // let isWeekend = true;
+        // let isHoliday = true;
+        // let hasLeaveApproved = true;
+
+        // if (isWeekend && isHoliday && hasLeaveApproved) {
+        //     console.log("Leave Approved")
+        // }
+        // else {
+        //     console.log("Leave Rejected")
+        // }
+
+        // type one Only using (OR) oparator
+        // let isWeekend = true;
+        // let isHoliday = true;
+        // let hasLeaveApproved = true;
+
+        // if (isWeekend || isHoliday || hasLeaveApproved) {
+        //     console.log("Leave Approved")
+        // }
+        // else {
+        //     console.log("Leave Rejected")
+        // }
+
+        //type one Only using (AND & OR) oparator
+        // let isWeekend = true;
+        // let isHoliday = true;
+        // let hasLeaveApproved = true;
+
+        // if ((isWeekend || isHoliday) && hasLeaveApproved) {
+        //     console.log("Leave Approved")
+        // }
+        // else {
+        //     console.log("Leave Rejected")
+        // }
+
+
+
+
+
+
+        // 3) write a program for seasons using switch statement
+        // summer,winter and rainy
+        // Include months in every season
+        // If you enter month season should print__one program
+
+        let season = "rainy";
+        switch (season) {
+            case "summer":
+                console.log("March, April, May, June");
+                break;
+            case "winter":
+                console.log("November, December, January, February");
+                break;
+            case "rainy":
+                console.log("October, July, August, September");
+                break;
+            default:
+                console.log("Invalid Season")
         }
 
 
 
-        buttonTwo.onclick = function () {
-            headElement.classList.remove("demo1");
-            button.classList.remove("demo");
-            buttonTwo.classList.remove("demo");
-            headElement.textContent = "Welcome to Javascript Classes";
-            para.textContent = "Welcome oppty world!...";
-        }
-
-        container.appendChild(button);
-        let para = document.createElement("p");
-        para.textContent = "Welcome oppty world!...";
-        container.appendChild(para);
-
-
-        //JavaScript Arithmetic Operators
-        let a = 5;
-        let b = 15;
-        // Addition
-        let c = a + b;
-        console.log("Addition :" + c);
-        // substraction
-        let d = b - a;
-        console.log("substraction :" + d);
-        // multiplication
-        let e = a * b;
-        console.log("multiplication :" + e);
-        // Exponentiation
-        let f = a ** b;
-        console.log("Exponentiation :" + f);
-        //Division
-        let g = a / b;
-        console.log("Division :" + g);
-        //Modulus 
-        let h = a % b;
-        console.log("Modulus :" + h);
-        //Increment
-        let i = a++;
-        console.log("Increment :" + i);
-        //Decrement
-        let j = a--;
-        console.log("Decrement :" + j);
 
 
 
 
-        // Arrays 
-        let arr = [90, "two", 9.8, false];
-        console.log(arr);
 
-        // Arrays Modification
-        arr[1] = 2;
-        console.log(arr);
+        // 4) and also print months using switch statement
+        // if you enter month number month should print
+        // example :
+        // if i enter 2
+        // February month should print
 
-        // Adding values in array
-        let arr1 = arr.push("satya");
-        arr.push("vinay")
-
-        // removing value from array
-        let pop = arr.pop();
-        console.log(arr);
-
-
-        // Indexing 
-        let arr2 = ["banana", 124, true]
-        console.log(typeof (arr2[0]))
-        console.log(typeof (arr2[1]))
-        console.log(typeof (arr2[2]))
-        console.log(arr2);
-
-        // Loops
-        for (let i of arr2) {
-            console.log(i)
-        }
-        // Objects
-        let hero = {
-            name: "satya",
-            age: 24,
-            designation: "software"
-        }
-        console.log("My Name is " + hero.name + " " + "My Age is " + hero.age + "  " + "and My designation is " + hero.designation);
-
-
-
-        // 1. Sum of the values of an array
-        let array = [12, 1, 2, 4, 1];
-        let adding = 0;
-        for (let values of array) {
-            adding += values
-        }
-        console.log("Sum Of Array  " + adding);
-
-        //2.Log the values from each object
-        let person = [
-            {
-                name: "Printing Press",
-                age: 22,
-                city: "Hyderabad"
-            },
-            {
-                name: "Light Buld",
-                age: 22,
-                city: "Hyderabad"
-            },
-            {
-                name: "Telephone",
-                age: 22,
-                city: "Hyderabad"
-            },
-            {
-                name: "Aeroplane",
-                age: 22,
-                city: "Hyderabad"
-            },
-            {
-                name: "Computer",
-                age: 22,
-                city: "Hyderabad"
-            },
-        ]
-
-        for (let test of person) {
-            let practice = test.name;
-            console.log(practice);
-        }
-
-        // Ellegivility to vote
-        let Voliting = [
-            {
-                name: "satya",
-                age: 12,
-            },
-            {
-                name: "ramu",
-                age: 20,
-            },
-            {
-                name: "srinadh",
-                age: 15,
-            },
-            {
-                name: "sridhar",
-                age: 22,
-            },
-            {
-                name: "sudharshan",
-                age: 16,
-            },
-        ]
-
-
-        for (let vote of Voliting) {
-            let elible = vote.age;
-            if (elible > 18) {
-                console.log(vote.name);
-            }
-        }
-
+        // let month = 5;
+        // switch (month) {
+        //     case 1:
+        //         console.log("January");
+        //         break;
+        //     case 2:
+        //         console.log("February");
+        //         break;
+        //     case 3:
+        //         console.log("March");
+        //         break;
+        //     case 4:
+        //         console.log("April");
+        //         break;
+        //     case 5:
+        //         console.log("May");
+        //         break;
+        //     case 6:
+        //         console.log("June");
+        //         break;
+        //     case 7:
+        //         console.log("July");
+        //         break;
+        //     case 8:
+        //         console.log("August");
+        //         break;
+        //     case 9:
+        //         console.log("September");
+        //         break;
+        //     case 10:
+        //         console.log("October");
+        //         break;
+        //     case 11:
+        //         console.log("November");
+        //         break;
+        //     case 12:
+        //         console.log("December");
+        //         break;
+        // }
 
 
 
