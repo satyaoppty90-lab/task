@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- For Loops  -->
+
+    <script>
+        // <!-- For Loops  -->
+        // -----------------------------------------(For Loops)----------------------------------------------------------------------------------
+
+        // 1). Print numbers from 1 to 10.
+        for (let i = 1; i <= 10; i++) {
+            console.log("from 1 to 10. - " + i);
+        }
+        // 2). Print numbers from 10 to 1.
+        for (let a = 10; a >= 1; a--) {
+            console.log("from 10 to 1. - " + a);
+        }
+        //3).Print all even numbers from 1 to 20.
+        for (let b = 1; b <= 20; b++) {
+            if (b % 2 == 0) {
+                console.log("Even Number :- " + b);
+            }
+        }
+        //4). Print all odd numbers from 1 to 20.
+        for (let c = 1; c <= 20; c++) {
+            if (c % 2 == 1) {
+                console.log("Odd Number :- " + c);
+            }
+        }
+        //5). Print numbers from 1 to 20, but skip 10.
+        for (let d = 1; d <= 20; d++) {
+            if (d == 10) {
+                continue;
+            }
+            console.log("skip 10 - " + d);
+        }
+        //6). Print numbers from 1 to 20 and stop when you reach 15.
+        for (let e = 1; e <= 20; e++) {
+            if (e === 15) {
+                break;
+            }
+            console.log("Stop At 15 - " + e);
+        }
+
+
+
+        // while loop 
+        // -----------------------------------------(while Loops)----------------------------------------------------------------------------------
+
+        // 1). Print numbers from 1 to 10.
+        let count = 1;
+        while (count <= 10) {
+            console.log("from 1 to 10 While - " + count);
+            count++;
+        }
+        // 2). Print numbers from 10 to 1.
+        let countOne = 10;
+        while (countOne >= 1) {
+            console.log("from 10 to 1 while - " + countOne)
+            countOne--;
+        }
+        //3).Print all even numbers from 1 to 20.
+        let even = 1;
+        while (even <= 20) {
+            if (even % 2 == 0) {
+                console.log("Even Number while :- " + even)
+            }
+            even++;
+        }
+        //4). Print all odd numbers from 1 to 20.
+        let odd = 1;
+        while (odd <= 20) {
+            if (odd % 2 == 1) {
+                console.log("Odd Number While :- " + odd);
+            }
+            odd++;
+        }
+        //5). Print numbers from 1 to 20, but skip 10.
+        let skip = 1;
+        while (skip <= 20) {
+            if (skip == 10) {
+                skip++;
+                continue;
+            }
+            console.log("skip 10 while - " + skip);
+            skip++;
+        }
+        //6). Print numbers from 1 to 20 and stop when you reach 15.
+        let breakOne = 1;
+        while (breakOne <= 20) {
+            if (breakOne == 15) {
+                breakOne++;
+                break;
+            }
+            console.log("Break 15 while - " + breakOne);
+            breakOne++;
+        }
+
+
+        // Do while
+        // -----------------------------------------(do while Loops)----------------------------------------------------------------------------------
+
+        // 1). Print numbers from 1 to 10.
+        let number = 1;
+        do {
+            console.log("do while loop :- " + number);
+            number++;
+        } while (number <= 10);
+
+        // 2). Print numbers from 10 to 1.
+        let reverseNumber = 10;
+        do {
+            console.log("do while loop reverseNumber :- " + reverseNumber)
+            reverseNumber--;
+        } while (reverseNumber >= 1);
+
+        //3).Print all even numbers from 1 to 20.
+        let doNumber = 1;
+        do {
+            if (doNumber % 2 == 0) {
+                console.log("Even Number do while :- " + doNumber);
+            }
+            doNumber++;
+        } while (doNumber <= 20);
+
+        //4). Print all odd numbers from 1 to 20.
+        let doNumberOdd = 1;
+        do {
+            if (doNumberOdd % 2 == 1) {
+                console.log("Odd Number do while :- " + doNumberOdd);
+            }
+            doNumberOdd++;
+        } while (doNumberOdd <= 20);
+
+        //5). Print numbers from 1 to 20, but skip 10.
+        let SkipTen = 1;
+        do {
+            if (SkipTen == 10) {
+                SkipTen++;
+                continue;
+            }
+            console.log("skip 10 do while - " + SkipTen)
+            SkipTen++;
+        } while (SkipTen <= 20)
+
+
+        // For of loop
+        // -----------------------------------------(For of Loops)----------------------------------------------------------------------------------
+
+        // 1). print the elements
+        let fruits = ["Apple", "Banana", "Mango"];
+        for (let fruit of fruits) {
+            console.log(fruit);
+        }
+
+        let name = "JavaScript";
+        for (let ch of name) {
+            console.log(ch);
+        }
+
+        // For in loop
+        // -----------------------------------------(For in Loops)----------------------------------------------------------------------------------
+        let student = {
+            name: "Satya",
+            age: 22,
+            course: "JavaScript"
+        };
+
+        for (let key in student) {
+            console.log(key);
+        }
+
+        let Employee = {
+            name: "Satya",
+            age: 22,
+            course: "JavaScript"
+        };
+
+        for (let key in Employee) {
+            console.log(key + " : " + Employee[key]);
+        }
+
+        // Foreach
+        // -----------------------------------------(For in Loops)----------------------------------------------------------------------------------
+        let numbers = [10, 20, 30, 40];
+        numbers.forEach(function (num) {
+            console.log(num);
+        });
+
+        let fruitsFor = ["Apple", "Banana", "Mango"];
+
+        fruitsFor.forEach(function (fruit, index) {
+            console.log(index + " : " + fruit);
+        });
+
+
+    </script>
+
+</body>
+
+</html>
