@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const movies = [
+            {
+                id: 1,
+                title: "Bahubali",
+                rating: 9
+            },
+            {
+                id: 2,
+                title: "Pushpa",
+                rating: 8
+            },
+            {
+                id: 3,
+                title: "RRR",
+                rating: 10
+            },
+            {
+                id: 4,
+                title: "Salaar",
+                rating: 7
+            }
+        ];
+
+        // 1. Create a new array containing only movie titles.
+        let newTitle = movies.map(movie => movie.title);
+        console.log(newTitle);
+
+        // 2. Create a new array containing only movie ratings.
+        let newRating = movies.map(movie => movie.rating);
+        console.log(newRating);
+
+        // 3. Increase every movie rating by 1.
+        let increasing = movies.map(movie => movie.rating + 1);
+        console.log(increasing);
+
+        // 4. Get all movies with rating greater than 8.
+        let greaterThan = movies.filter(movie => movie.rating > 8);
+        console.log(greaterThan);
+
+        // 5. Get all movies with rating less than 9.
+        let LessThan = movies.filter(movie => movie.rating < 9);
+        console.log(LessThan);
+
+        // 6. Find the movie with ID 3.
+        let movieId = movies.find(movie => movie.id === 3);
+        console.log(movieId);
+
+        // 7. Find the movie with title “Pushpa”.
+        let movieTitle = movies.find(movie => movie.title === "Pushpa");
+        console.log(movieTitle);
+
+        // 8. Calculate the total of all movie ratings.
+        let sumRating = movies.reduce((sum, movie) => sum + movie.rating, 0);
+        console.log(sumRating);
+
+
+
+        // Dataset 2: Products
+        const products = [
+            {
+                id: 1,
+                name: "Laptop",
+                price: 50000
+            },
+            {
+                id: 2,
+                name: "Mouse",
+                price: 500
+            },
+            {
+                id: 3,
+                name: "Keyboard",
+                price: 1500
+            },
+            {
+                id: 4,
+                name: "Monitor",
+                price: 12000
+            }
+        ];
+
+        // 9. Create an array containing only product names.
+        let productName = products.map(product => product.name);
+        console.log(productName);
+
+        // 10. Create an array containing only product prices.
+        let productPrice = products.map(product => product.price);
+        console.log(productPrice);
+
+        // 11. Increase every product price by ₹1000.
+        let IncreadingProduct = products.map(product => product.price + 1000);
+        console.log(IncreadingProduct);
+
+        // 12. Get all products costing more than ₹1000.
+        let MoreThan = products.filter(product => product.price > 1000);
+        console.log(MoreThan);
+
+        // 13. Get all products costing less than ₹10000.
+        let lessThan = products.filter(product => product.price < 10000);
+        console.log(lessThan);
+
+        // 14. Find the product with ID 2.
+        let findProduct = products.filter(product => product.id == 2);
+        console.log(findProduct);
+
+        // 15. Find the product named “Monitor”.
+        let nameProduct = products.find(product => product.name === "Monitor");
+        console.log(nameProduct);
+
+        // 16. Calculate the total cost of all products.
+        let calculateProduct = products.reduce((sum, product) => sum + product.price, 0);
+        console.log(calculateProduct);
+
+
+        // Dataset 3: Cricket Scores
+        const scores = [45, 80, 20, 100, 60];
+
+        // 17. Add 10 runs to every score.
+        let addScore = scores.map(score => score + 10);
+        console.log(addScore);
+
+        // 18. Add 5 runs to every score.
+        let fiveScore = scores.map(score => score + 5);
+        console.log(fiveScore);
+
+        // 19. Get all scores greater than 50
+        let greaterScore = scores.filter(score => score > 50);
+        console.log(greaterScore);
+
+        // 20. Get all scores greater than or equal to 80.
+        let equal = scores.filter(score => score > 80);
+        console.log(equal);
+
+        // 21. Find the first score greater than 70.
+        let findGreater = scores.find(score => score > 70);
+        console.log(findGreater);
+
+        //22. Find the first score equal to 100.
+        let firstEqual = scores.find(score => score >= 100);
+        console.log(firstEqual);
+
+        // 23. Calculate the total runs scored.
+        let calculateRuns = scores.reduce((sum, score) => sum + score, 0);
+        console.log(calculateRuns);
+
+        // 24. Calculate the average score.
+        let avarageRuns = scores.reduce((avg, score) => avg + score / scores.length, 0);
+        console.log(avarageRuns);
+
+
+        // Dataset 4: Students
+        const students = [
+            {
+                name: "Ravi",
+                marks: 90
+            },
+            {
+                name: "Priya",
+                marks: 75
+            },
+            {
+                name: "Rahul",
+                marks: 40
+            },
+            {
+                name: "Anu",
+                marks: 95
+            }
+        ];
+
+        // 25. Create an array containing only student names.
+        let studentName = students.map(student => student.name);
+        console.log(studentName);
+
+        // 26. Create an array containing only student marks.
+        let studentMarks = students.map(student => student.marks);
+        console.log(studentMarks);
+
+        // 27. Add 5 marks to every student.
+        let addingMarks = students.map(student => student.marks + 5);
+        console.log(addingMarks);
+
+        // 28. Get students who scored above 80.
+        let scoreAbove = students.filter(student => student.marks > 80);
+        console.log(scoreAbove);
+
+        // 29. Get students who scored below 50.
+        let belowMarks = students.filter(student => student.marks < 50);
+        console.log(belowMarks);
+
+        // 30. Find the student named “Rahul”.
+        let nameRahul = students.find(student => student.name === "Rahul");
+        console.log(nameRahul);
+
+        // 31. Find the first student who scored above 90.
+        let firstStudent = students.find(student => student.marks > 90);
+        console.log(firstStudent);
+
+        // 32. Calculate the total marks of all students.
+        let totalMarks = students.reduce((sum, student) => sum + student.marks, 0);
+        console.log(totalMarks);
+
+
+        // Dataset 5: Food Orders
+        const foodOrders = [
+            {
+                item: "Pizza",
+                price: 300
+            },
+            {
+                item: "Burger",
+                price: 150
+            },
+            {
+                item: "Biryani",
+                price: 250
+            },
+            {
+                item: "Ice Cream",
+                price: 100
+            }
+        ];
+
+        // 33. Create an array containing only food item names.
+        let foodItem = foodOrders.map(food => food.item);
+        console.log(foodItem);
+
+        // 34. Create an array containing only food prices.
+        let foodPrice = foodOrders.map(food => food.price);
+        console.log(foodPrice);
+
+        // 35. Increase every food price by ₹50.
+        let increasingPrice = foodOrders.map(food => food.price + 50);
+        console.log(increasingPrice);
+
+        // 36. Get all food items costing more than ₹200.
+        let costingMore = foodOrders.filter(food => food.price > 200);
+        console.log(costingMore);
+
+        // 37. Get all food items costing less than ₹250.
+        let costLess = foodOrders.filter(food => food.price < 250);
+        console.log(costLess);
+
+        // 38. Find the food item “Biryani”.
+        let Biriyani = foodOrders.find(food => food.item === "Biryani");
+        console.log(Biriyani);
+
+        // 39. Find the first food item costing more than ₹250
+        let foodCost = foodOrders.filter(food => food.price === 250);
+        console.log(foodCost);
+
+        // 40. Calculate the total food bill.
+        let totalBill = foodOrders.reduce((sum, food) => sum + food.price, 0);
+        console.log(totalBill);
+
+
+        // Bonus Tasks
+        //41. Create an array of movie titles in uppercase.
+        let array = ["rrr", "peddi", "og", "kgf"];
+        let upperLetter = array.map(arr => arr.toUpperCase());
+        console.log(upperLetter);
+
+        // 42. Create an array of product names in lowercase.
+        let arrayTwo = ["laptop", "mouse", "mobiles", "chaegers"]
+        console.log(arrayTwo);
+
+        // 43. Get all students whose names start with “R”.
+        let valueR = students.filter(names => names.name.startsWith("R"));
+        console.log(valueR);
+
+
+        // 44. Get all movies whose title length is greater than 5.
+        let movieGreaterFive = movies.filter(film => film.title.length > 5);
+        console.log(movieGreaterFive);
+
+        // 45. Calculate the combined total of all cricket scores and all student marks.
+        let combine = 0;
+        for (let percenta of students) {
+            let typo = parseInt(percenta.marks);
+            combine = combine + typo;
+        }
+        let combineScore = 0;
+        for (let cricketScore of scores) {
+            combineScore += cricketScore;
+        }
+        console.log(combineScore + combine);
+
+
+        //  46. Find the most expensive product.
+        const Demoproducts = [
+            { id: 1, name: "Laptop", price: 50000 },
+            { id: 2, name: "Mouse", price: 500 },
+            { id: 3, name: "Keyboard", price: 1500 },
+            { id: 4, name: "Monitor", price: 12000 },
+            { id: 5, name: "MacBook", price: 100000 }
+
+        ];
+        let expensive = Demoproducts.map(price => price.price);
+        for (let a = 0; a < expensive.length; a++) {
+            for (let b = a + 1; b < expensive.length; b++) {
+                if (expensive[a] < expensive[b]) {
+                    let check = expensive[a];
+                    expensive[a] = expensive[b];
+                    expensive[b] = check;
+                }
+            }
+        }
+        let find = expensive[0];
+        let filter = Demoproducts.filter(checking => checking.price === find);
+        console.log(filter);
+
+        // 47. Find the highest cricket score.
+        const Demoscores = [45, 80, 20, 100, 60, 210];
+        for (let i = 0; i < Demoscores.length; i++) {
+            for (let j = i + 1; j < Demoscores.length; j++) {
+                if (Demoscores[i] > Demoscores[j]) {
+                    let temp = scores[i];
+                    Demoscores[i] = Demoscores[j];
+                    Demoscores[j] = temp;
+                }
+            }
+        }
+        let highScore = Demoscores.length - 1;
+        let high = Demoscores[highScore];
+        console.log(high);
+
+        // 48. Find the student with the highest marks.
+        const Demostudents = [
+            {
+                name: "Ravi",
+                marks: 90
+            },
+            {
+                name: "Priya",
+                marks: 75
+            },
+            {
+                name: "Rahul",
+                marks: 40
+            },
+            {
+                name: "Anu",
+                marks: 95
+            }
+        ];
+        let highmarks = Demostudents.map(studymarks => studymarks.marks);
+        for (let c = 0; c < highmarks.length; c++) {
+            for (let d = c + 1; d < highmarks.length; d++) {
+                if (highmarks[c] < highmarks[d]) {
+                    let highM = highmarks[c];
+                    highmarks[c] = highmarks[d];
+                    highmarks[d] = highM;
+                }
+            }
+        }
+        let separate = highmarks[0];
+        let studentFind = Demostudents.find(found => found.marks === separate);
+        console.log(studentFind.name);
+
+        // 49. Find the movie with the highest rating.
+        const DemoMovies = [
+            {
+                id: 1,
+                title: "Bahubali",
+                rating: 9
+            },
+            {
+                id: 2,
+                title: "Pushpa",
+                rating: 8
+            },
+            {
+                id: 3,
+                title: "RRR",
+                rating: 10
+            },
+            {
+                id: 4,
+                title: "Salaar",
+                rating: 7
+            }
+        ];
+        let movieRating = DemoMovies.map(rating => rating.rating);
+        for (let e = 0; e < movieRating.length; e++) {
+            for (let f = 0; f < movieRating.length; f++) {
+                if (movieRating[e] > movieRating[f]) {
+                    let swap = movieRating[e];
+                    movieRating[e] = movieRating[f];
+                    movieRating[f] = swap;
+                }
+            }
+        }
+        let movieFind = movieRating[0];
+        let findOut = DemoMovies.find(findMovie => findMovie.rating === movieFind);
+        console.log(findOut.title);
+
+        // 50. Create your own dataset and write 5 custom operations on it.
+        const employees = [
+            {
+                id: 1,
+                name: "Ravi",
+                department: "IT",
+                salary: 50000
+            },
+            {
+                id: 2,
+                name: "Priya",
+                department: "HR",
+                salary: 45000
+            },
+            {
+                id: 3,
+                name: "Rahul",
+                department: "IT",
+                salary: 60000
+            },
+            {
+                id: 4,
+                name: "Anu",
+                department: "Finance",
+                salary: 55000
+            },
+            {
+                id: 5,
+                name: "Kiran",
+                department: "IT",
+                salary: 70000
+            }
+        ];
+
+        let newArray = employees.map(oparatorOne => oparatorOne.name);
+        console.log(newArray);
+
+        let department = employees.map(dept => dept.department);
+        console.log(department);
+
+        let sumSalary = employees.reduce((sum, tot) => sum + tot.salary, 0);
+        console.log(sumSalary);
+
+        let findSalary = employees.find(findsal => findsal.name === "Anu");
+        console.log(findSalary);
+
+        let filterName = employees.filter(fil => fil.department === "IT");
+        console.log(filterName);
+
+
+    </script>
+
+
+</body>
+
+</html>
