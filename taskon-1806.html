@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="taskon-1706.css">
+
+</head>
+
+<body>
+
+    <div class="box">
+        <h1 style="text-align: center;">Movie Ticket</h1>
+
+        <label for="age"><b>Age:-</b> </label><br>
+        <input id="age" type="number" placeholder="Enter Your Age...">
+
+        <br><br>
+
+        <label for="showtime"><b>Show Time:-</b></label><br>
+        <select id="showtime">
+            <option value="matinee">matinee</option>
+            <option value="evening">evening</option>
+        </select>
+
+        <br><br>
+
+        <button onclick="checkTicket()">Check Price</button>
+
+        <p id="result">Ticket Price: Unknown</p>
+        <p id="show">Show Time </p>
+    </div>
+
+
+
+
+
+
+
+    <!-- <div class="box">
+        <h1> Movie Ticket </h1>
+        <label for="age"> Age </label> <br />
+        <input id="age" type="search" placeholder="Enter Your Age..." />
+
+        <button onclick="checkLight()">Check Action</button>
+        <p id="result">Action: Unknown</p>
+    </div> -->
+
+    <script src="taskon-1706.js"></script>
+</body>
+
+</html>
