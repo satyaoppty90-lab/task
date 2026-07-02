@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task-quez.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Welcome Card -->
+    <div id="welcome" class="container">
+        <div>
+            <h1> Welcome to the JavaScript Quiz! </h1>
+            <p> Test your JavaScript knowledge with 10 multiple choice questions. </p>
+
+            <div class="main-card">
+                <div class="card">
+                    <p> <i class="fa-solid fa-bars"></i> 10<br /> quetions</p>
+                </div>
+                <div class="card">
+                    <p> <i class="fa-solid fa-stopwatch"></i> multiple choice</p>
+                </div>
+                <div class="card">
+                    <p> <i class="fa-solid fa-trophy" style="color: gold;"></i> Test Your knowledge </p>
+                </div>
+            </div>
+            <button onclick="startBtn()" class="btn">Start Quiz</button>
+
+        </div>
+    </div>
+
+    <!-- Questions Card -->
+    <div id="question-ele" class="hide">
+        <div class="second-container">
+            <div class="second-card">
+                <div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <P> Question <span id="increament"> 0</span> of 10 </P>
+                        <p class="timer">Time Left: <span id="timer">10</span>s</p>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div id="bar-progress" class="progress-two-bar">
+                        </div>
+                    </div>
+
+
+                    <div class="question-card">
+
+                        <h4 id="questionHead"></h4>
+
+                        <div class="box">
+                            <input value="0" name="answer" type="radio" id="Python" />
+                            <label id="optionOne" for="Python"> </label>
+                        </div>
+
+                        <div class="box">
+                            <input value="1" name="answer" type="radio" id="Java" />
+                            <label id="optionTwo" for="Java"> </label>
+                        </div>
+
+                        <div class="box">
+                            <input value="2" name="answer" type="radio" id="JavaScript" />
+                            <label id="optionThree" for="JavaScript"> </label>
+                        </div>
+
+                        <div class="box">
+                            <input value="3" name="answer" type="radio" id="C" />
+                            <label id="optionFour" for="C"> </label>
+                        </div>
+                    </div>
+                </div>
+                <p id="warningMsg"></p>
+                <br />
+                <br />
+                <div class="btn-container">
+                    <button onclick="previousBtn()" class="button one-btn"> Previous </button>
+                    <button class="hideOne" id="hideOne" onclick="submitBtn()" class="button"> Submit Now </button>
+                    <button onclick="nextBtn()" class="button"> Next </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submition Card -->
+    <div id="Submission" class="Submission-card container">
+        <div>
+            <h1> Quiz Completed </h1>
+            <p> Great Job! Here Your Result </p>
+
+            <div class="main-card">
+                <div class="card card-second">
+                    <p> <i class="fa-solid fa-circle-check" style="color:green;"></i><span id="correct"></span> correct
+                    </p>
+                </div>
+                <div class="card card-third">
+                    <p> <i class="fa-solid fa-xmark" style="color:red;"></i><span id="wrong"></span> Wrong Answers</p>
+                </div>
+                <div class="card">
+                    <p> <i class="fa-solid fa-bars"></i> 10<br /> quetions</p>
+                </div>
+            </div>
+            <button onclick="restart()" class="btn">Restart Quiz</button>
+
+        </div>
+    </div>
+
+    <script src="task-quez.js"></script>
+</body>
+
+</html>
