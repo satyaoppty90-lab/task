@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- ================================ Task - 1 ==========================================    -->
+    <h5> Task :1. Change Color </h5>
+    <div id="card" class="container">
+        <button style="margin-top: 10vh;" id="button-bg" onclick="headclick()"> change Color </button>
+    </div>
+
+
+    <!-- ================================ Task - 2 ==========================================    -->
+    <!-- A Function with One Parameter -->
+    <div>
+        <h5> Task :2. A Function with One Parameter</h1>
+            <input id="input-val" class="input-one" type="text" placeholder="Enter Value" />
+            <button onclick="runFunction()">Run Function </button>
+            <p id="para"></p>
+    </div>
+
+    <!-- ================================ Task - 3 ==========================================    -->
+    <!-- Multiple Parameters -->
+    <div>
+        <h5> Task :3. Multiple Parameters </h5>
+        <input id="inputEl" class="input-two" type="text" />
+        <select id="multiple" class="input-two">
+            <option value="add"> + </option>
+            <option value="minus"> - </option>
+            <option value="mul"> * </option>
+        </select>
+        <input id="inputE2" class="input-two" type="text" />
+        <button onclick="calculate()"> Calculate </button>
+        <p id="paraOne"></p>
+    </div>
+
+    <!-- ================================ Task - 4 ==========================================    -->
+    <!-- Form Validation -->
+    <div>
+        <h5> Task :4. Form Validation</h5>
+        <input id="inputTaskE1" class="inputThree" type="text" placeholder="Enter Value" />
+        <input id="inputTaskE2" class="inputFour" type="number" />
+        <button onclick="checkNum()" class="btn"> check</button>
+        <p id="tast-four"></p>
+    </div>
+
+    <!-- ================================ Task - 5 ==========================================    -->
+    <!-- E-commerce Discount -->
+    <div>
+        <h5> Task :5. E-commerce Discount </h5>
+        <div style="display: flex; justify-content: space-around;">
+            <h3> $ </h3>
+            <input id="E-commerceE1" class="commerce" type="text" />
+            <h3>% Off</h3>
+            <input id="E-commerceE2" class="commerce" type="text" />
+            <button onclick="applybtn()" class="btnOne">Apply</button>
+        </div>
+        <p id="ecommersePara"></p>
+    </div>
+
+    <!-- ================================ Task - 6 ==========================================    -->
+    <!-- Text Truncator -->
+    <div>
+        <h5> Task :6. Text Truncator </h5>
+        <input id="TruncatorE1" class="inputThree" type="text" placeholder="Enter Value" />
+        <input id="TruncatorE2" class="inputFour" type="number" />
+        <button onclick="Truncator()" class="btn"> check</button>
+        <p id="truncatorPara"></p>
+    </div>
+
+    <!-- ================================ Task - 7 ==========================================    -->
+    <!-- Dice Roller (Randomizer) -->
+    <div>
+        <h5> Task :7. Dice Roller (Randomizer)</h5>
+        <h1 id="dice">--</h1>
+        <button onclick="diceRoller()">Roll D6</button>
+        <button onclick="diceRollerOne()">Roll D20</button>
+        <button onclick="diceRollerTwo()">Roll D100</button>
+    </div>
+
+    <!-- ================================ Task - 8 ==========================================    -->
+    <!-- Dynamic UI Updater -->
+
+    <br />
+    <div>
+        <h5>Task :8. Dynamic UI Updater</h5>
+        <div class="out-bar">
+            <div id="inner-bar">
+                <h6 id="headSix"></h6>
+            </div>
+        </div>
+        <br />
+        <button onclick="barTen()">10%</button>
+        <button onclick="barFifty()">50%</button>
+        <button onclick="barHundred()">100%</button>
+
+    </div>
+
+
+
+
+    <style>
+        /* <!-- ================================ Task - 1 ==========================================    --> */
+        body {
+            text-align: center;
+            background: linear-gradient(to right, #E0C3FC, #8EC5FC);
+        }
+
+        .container {
+            width: 100vw;
+            height: 26vh;
+            text-align: center;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            border: 0;
+            border-radius: 5px;
+            border: 1px solid black;
+            font-weight: bold;
+        }
+
+        /* <!-- ================================ Task - 2 ==========================================    -->
+        <!-- A Function with One Parameter --> */
+        .input-one {
+            width: 70vw;
+            height: 4vh;
+            margin-right: 10px;
+        }
+
+        /* <!-- ================================ Task - 3 ==========================================    -->
+         <!-- Multiple Parameters --> */
+        .input-two {
+            width: 60px;
+            height: 25px;
+        }
+
+        /* <!-- ================================ Task - 4 ==========================================    -->
+            <!-- Form Validation --> */
+        .inputThree {
+            width: 77vw;
+            height: 4vh;
+        }
+
+        .inputFour {
+            width: 6vw;
+            height: 4vh;
+        }
+
+        .btn {
+            width: 6vw;
+            height: 5vh;
+            border: 0;
+            border-radius: 5px;
+            border: 1px solid black;
+            font-weight: bold;
+        }
+
+        .task_four {
+            border: 1px solid green;
+            background-color: rgb(228, 240, 228);
+            padding: 10px;
+            width: 90vw;
+            margin-left: 40px;
+            font-weight: bold;
+            color: green;
+        }
+
+        .task_red {
+            border: 1px solid red;
+            background-color: rgb(237, 217, 217);
+            padding: 10px;
+            width: 90vw;
+            margin-left: 40px;
+            font-weight: bold;
+            color: red;
+        }
+
+        /* < !--================================Task - 5 ==========================================-->
+        < !-- E-commerce Discount --> */
+        .commerce {
+            height: 6vh;
+            width: 30vw;
+        }
+
+        .btnOne {
+            width: 150px;
+            height: 40px;
+            border: 0;
+            border-radius: 5px;
+            border: 1px solid black;
+            font-weight: bold;
+        }
+
+        /* <!-- ================================ Task - 8 ==========================================    -->
+        <!-- Dynamic UI Updater --> */
+
+        .out-bar {
+            width: 98vw;
+            height: 3vh;
+            background-color: rgb(237, 226, 226);
+            border-radius: 30px;
+        }
+    </style>
+
+    <script>
+        //  <!-- ================================ Task - 1 ==========================================    -->
+        let color = document.getElementById("card");
+        let buttonBg = document.getElementById("button-bg");
+        function headclick() {
+            let arr = ["red", "green", "blue", "black", "pink", "yellow", "orange"];
+            let arrOne = ["#FFD8A8", "#C8F7C5", "#ADD8E6", "#FFC0CB", "#D3D3D3", "#FFF9B0", "#FFB3BA"];
+            let colorPick = arr[Math.floor(Math.random() * arr.length)]
+            let colorPickOne = arrOne[Math.floor(Math.random() * arrOne.length)]
+
+            color.style.backgroundColor = colorPick;
+            buttonBg.style.backgroundColor = colorPickOne;
+            buttonBg.textContent = colorPick;
+            buttonBg.style.color = colorPick;
+        }
+
+
+
+        /* <!-- ================================ Task - 2 ==========================================    -->
+        <!-- A Function with One Parameter --> */
+        let inputTwoEl = document.getElementById("input-val");
+        let para = document.getElementById("para");
+        function runFunction() {
+            let ans = inputTwoEl.value;
+            if (ans === "") {
+                para.textContent = "Please Enter Value !";
+                para.style.color = "red"
+            } else {
+                para.textContent = "Hello " + ans + " !";
+                para.style.color = "blue";
+            }
+        }
+
+        /* <!-- ================================ Task - 3 ==========================================    -->
+        <!-- Multiple Parameters --> */
+        let inputEl = document.getElementById("inputEl");
+        let inputE2 = document.getElementById("inputE2");
+        let multiple = document.getElementById("multiple");
+        let paraOne = document.getElementById("paraOne");
+        // function calculate() {
+        //     let valueOne = parseInt(inputEl.value);
+        //     let valueTwo = parseInt(inputE2.value);
+        //     if (multiple.value === "add") {
+        //         let total = valueOne + valueTwo;
+        //         paraOne.textContent = "Result: " + total;
+        //     }
+        //     else if (multiple.value === "minus") {
+        //         let total = valueOne - valueTwo;
+        //         paraOne.textContent = "Result: " + total;
+        //     } else {
+        //         let total = valueOne * valueTwo;
+        //         paraOne.textContent = "Result: " + total;
+        //     }
+        // }
+
+        function calculateTotal(a, b, c) {
+            if (c.value === "add") {
+                let toatl = a + b;
+                paraOne.textContent = "Final Result: " + toatl;
+            }
+            else if (c.value === "minus") {
+                let toatl = a - b;
+                paraOne.textContent = "Final Result: " + toatl;
+            }
+            else {
+                let toatl = a * b;
+                paraOne.textContent = "Final Result: " + toatl;
+            }
+        }
+
+        function calculate() {
+            let valueOne = parseInt(inputEl.value);
+            let valueTwo = parseInt(inputE2.value);
+            calculateTotal(valueOne, valueTwo, multiple)
+        }
+
+        /* <!-- ================================ Task - 4 ==========================================    -->
+        <!-- Form Validation --> */
+        let inputTaskE1 = document.getElementById("inputTaskE1");
+        let inputTaskE2 = document.getElementById("inputTaskE2");
+        let tastFour = document.getElementById("tast-four");
+
+        function checkNum() {
+            let valueThree = inputTaskE1.value;
+            let valueFour = parseInt(inputTaskE2.value);
+            let len = valueThree.length;
+            if (len === valueFour) {
+                tastFour.textContent = " Valid Password ✅"
+                tastFour.classList.add("task_four");
+            } else {
+                tastFour.textContent = " Need " + valueFour + " chars ❌";
+                tastFour.classList.add("task_red");
+            }
+        }
+        /* <!-- ================================ Task - 5 ==========================================    -->
+        < !-- E-commerce Discount --> */
+        let eCommerceE1 = document.getElementById("E-commerceE1");
+        let eCommerceE2 = document.getElementById("E-commerceE2");
+        let ecommersePara = document.getElementById("ecommersePara");
+        function applybtn() {
+            let comeValue = parseInt(eCommerceE1.value);
+            let comeValueTwo = parseInt(eCommerceE2.value);
+            let cost = ((comeValue / 100) * comeValueTwo);
+            let Final = comeValue - cost;
+            ecommersePara.textContent = "Final Price: $" + Final;
+            ecommersePara.classList.add("task_four");
+        }
+
+        /* <!-- ================================ Task - 6 ==========================================    -->
+        < !-- Text Truncator --> */
+        let TruncatorE1 = document.getElementById("TruncatorE1");
+        let TruncatorE2 = document.getElementById("TruncatorE2");
+        let truncatorPara = document.getElementById("truncatorPara");
+        function Truncator() {
+            let valueTrun = TruncatorE1.value;
+            let valueNum = parseInt(TruncatorE2.value);
+            let final = valueTrun.substring(0, valueNum);
+            truncatorPara.textContent = final;
+            truncatorPara.classList.add("task_four");
+        }
+
+        /* < !--================================Task - 7 ==========================================-->
+        < !-- Dice Roller (Randomizer) --> */
+        let deciHead = document.getElementById("dice");
+        function diceRoller() {
+            let diceValue = Math.floor(Math.random() * 6);
+            deciHead.textContent = diceValue;
+            deciHead.style.color = "purple";
+        }
+
+        function diceRollerOne() {
+            let diceValue = Math.floor(Math.random() * 20);
+            deciHead.textContent = diceValue;
+            deciHead.style.color = "Red";
+        }
+        function diceRollerTwo() {
+            let diceValue = Math.floor(Math.random() * 100);
+            deciHead.textContent = diceValue;
+            deciHead.style.color = "green";
+        }
+
+        /* <!-- ================================ Task - 8 ==========================================    -->
+        <!-- Dynamic UI Updater --> */
+        let innerBar = document.getElementById("inner-bar");
+        let headSix = document.getElementById("headSix");
+        function barTen() {
+            innerBar.style.width = 10 + "vw";
+            innerBar.style.borderRadius = 10 + "px";
+            innerBar.style.height = 3 + "vh";
+            innerBar.style.backgroundColor = "blue";
+            headSix.textContent = "10%"
+            headSix.style.color = "white";
+            headSix.style.paddingTop = 3 + "px";
+            headSix.style.textAlign = "end";
+        }
+        function barFifty() {
+            innerBar.style.width = 50 + "vw";
+            innerBar.style.borderRadius = 10 + "px";
+            innerBar.style.height = 3 + "vh";
+            innerBar.style.backgroundColor = "green";
+            headSix.textContent = "50%"
+            headSix.style.color = "white";
+            headSix.style.paddingTop = 3 + "px";
+            headSix.style.textAlign = "end";
+        }
+        function barHundred() {
+            innerBar.style.width = 98 + "vw";
+            innerBar.style.borderRadius = 10 + "px";
+            innerBar.style.height = 3 + "vh";
+            innerBar.style.backgroundColor = "red";
+            headSix.textContent = "100%"
+            headSix.style.color = "white";
+            headSix.style.paddingTop = 3 + "px";
+            headSix.style.textAlign = "end";
+        }
+    </script>
+</body>
+
+</html>

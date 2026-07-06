@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <label for="weather"> Enter City Name :- </label>
+            <br />
+            <br />
+            <input id="weather" type=search />
+            <p> Temprature :- <span id="time"></span> °C </p>
+            <p>humidity :- <span id="weatherPara"> % </span> </p>
+            <p>Wind Speed :- <span id="Wind"></span> m/s </p>
+            <button id="btn">Search</button>
+        </div>
+
+
+
+        <div>
+            <label> Enetr City Name :- </label>
+            <br />
+            <br />
+            <input id="searchMap" type=search />
+            <br />
+            <br />
+
+            <iframe id="map" width="600" height="400"></iframe>
+            <button id="btnOne"> Search Location</button>
+        </div>
+
+    </div>
+
+
+
+
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            background: linear-gradient(to bottom right, red, yellow);
+            padding: 20px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        input {
+            width: 45vw;
+            height: 6vh;
+            margin: 8px;
+        }
+
+        button {
+            width: 150px;
+            height: 36px;
+            color: white;
+            background-color: blue;
+            border: 0;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    </style>
+
+
+
+
+    <script>
+
+        let time = document.getElementById("time");
+        let weatherPara = document.getElementById("weatherPara");
+        let wind = document.getElementById("Wind");
+        let button = document.getElementById("btn");
+
+
+        function weather() {
+            let city = document.getElementById("weather").value;
+            let apiKey = "c6bb504f44dd412102a8b96ad2089b85";
+
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+            let options = {
+                method: "GET"
+            }
+
+            fetch(url, options)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    time.textContent = data.main.temp;
+                    weatherPara.textContent = data.main.humidity;
+                    wind.textContent = data.wind.speed;
+                })
+        }
+        button.addEventListener("click", weather);
+
+
+
+
+        let btnOne = document.getElementById("btnOne");
+
+        function searchMap() {
+            let city = document.getElementById("searchMap").value;
+            document.getElementById("map").src =
+                 `https://www.google.com/maps?q=${encodeURIComponent(city)}&output=embed`;
+
+        }
+        btnOne.addEventListener("click", searchMap);
+
+
+    </script>
+
+</body>
+
+<body>
+
+
+</body>
+
+</html>
