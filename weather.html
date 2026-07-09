@@ -8,78 +8,156 @@
 </head>
 
 <body>
-
     <div class="container">
+        <div class="card">
+            <h2>🌦 Weather Application</h2>
+            <label>Enter City Name</label>
+            <input id="weather" type="search" placeholder="Enter city name">
+            <button id="btn">Search Weather</button>
+            <div id="cardOne" class="result">
+                <p>🌡 Temperature :
+                    <span id="time"></span> °C
+                </p>
+                <p>💧 Humidity :
+                    <span id="weatherPara"></span> %
+                </p>
+                <p>💨 Wind Speed :
+                    <span id="Wind"></span> m/s
+                </p>
+            </div>
+        </div>
 
         <div class="card">
-            <label for="weather"> Enter City Name :- </label>
-            <br />
-            <br />
-            <input id="weather" type=search />
-            <p> Temprature :- <span id="time"></span> °C </p>
-            <p>humidity :- <span id="weatherPara"> % </span> </p>
-            <p>Wind Speed :- <span id="Wind"></span> m/s </p>
-            <button id="btn">Search</button>
+            <h2>📍 Google Maps</h2>
+            <label>Enter City Name</label>
+            <input id="searchMap" type="search" placeholder="Search location">
+            <button id="btnOne">Search Location</button>
+            <iframe id="map"></iframe>
         </div>
-
-
-
-        <div>
-            <label> Enetr City Name :- </label>
-            <br />
-            <br />
-            <input id="searchMap" type=search />
-            <br />
-            <br />
-
-            <iframe id="map" width="600" height="400"></iframe>
-            <button id="btnOne"> Search Location</button>
-        </div>
-
     </div>
 
-
-
-
-
     <style>
-        .container {
-            display: flex;
-            justify-content: space-around;
-            background: linear-gradient(to bottom right, red, yellow);
-            padding: 20px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         body {
-            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            padding: 30px;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            max-width: 1300px;
+        }
+
+        .card {
+            background: linear-gradient(105deg, #05e1ec, #9ecef8);
+            width: 500px;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+        }
+
+        .card h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            color: #444;
         }
 
         input {
-            width: 45vw;
-            height: 6vh;
-            margin: 8px;
+            width: 100%;
+            height: 45px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            padding-left: 15px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus {
+            border: 2px solid #2196f3;
         }
 
         button {
-            width: 150px;
-            height: 36px;
+            width: 100%;
+            height: 45px;
+            background: #2196f3;
             color: white;
-            background-color: blue;
-            border: 0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
             font-weight: bold;
-            border-radius: 5px;
+            transition: .3s;
+        }
+
+        button:hover {
+            background: #0d8bf2;
+        }
+
+        .result {
+            margin-top: 25px;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .result p {
+            font-size: 18px;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        span {
+            color: #2196f3;
+            font-weight: bold;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        @media(max-width:1100px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 95%;
+            }
         }
     </style>
 
-
-
-
     <script>
-
         let time = document.getElementById("time");
         let weatherPara = document.getElementById("weatherPara");
         let wind = document.getElementById("Wind");
         let button = document.getElementById("btn");
+        let cardOne = document.getElementById("cardOne");
 
 
         function weather() {
@@ -96,34 +174,121 @@
                     return response.json();
                 })
                 .then(function (data) {
+                    if (data.main.temp > 25) {
+                        cardOne.style.backgroundColor = "red"
+                    } else if (data.main.temp < 25) {
+                        cardOne.style.backgroundColor = "orange"
+                    }
                     time.textContent = data.main.temp;
                     weatherPara.textContent = data.main.humidity;
                     wind.textContent = data.wind.speed;
-                })
+                }).catch(function (error) {
+                    alert("invalid City");
+                });
         }
         button.addEventListener("click", weather);
 
 
 
 
+        // let time = document.getElementById("time");
+        // let weatherPara = document.getElementById("weatherPara");
+        // let wind = document.getElementById("Wind");
+        // let button = document.getElementById("btn");
+
+        // async function weather() {
+
+        //     try {
+        //         let city = document.getElementById("weather").value;
+        //         let apiKey = "c6bb504f44dd412102a8b96ad2089b85";
+        //         let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        //         let options = {
+        //             method: "GET"
+        //         };
+
+        //         let response = await fetch(url, options);
+        //         if (!response.ok) {
+        //             throw new Error("City not found.");
+        //         }
+        //         let data = await response.json();
+        //         time.textContent = data.main.temp;
+        //         weatherPara.textContent = data.main.humidity;
+        //         wind.textContent = data.wind.speed;
+
+        //     } catch (error) {
+        //         alert(error.message);
+        //         time.textContent = "";
+        //         weatherPara.textContent = "";
+        //         wind.textContent = "";
+        //     }
+        // }
+        // button.addEventListener("click", weather);
+
+
+
+
+
+
+
+
         let btnOne = document.getElementById("btnOne");
+        let map = document.getElementById("map");
+
+        function showCurrentLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        let lat = position.coords.latitude;
+                        let lon = position.coords.longitude;
+                        map.src = `https://www.google.com/maps?q=${lat},${lon}&output=embed`;
+                    },
+                    function (error) {
+                        alert("Unable to get your location.");
+                    }
+                );
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+        showCurrentLocation();
+
 
         function searchMap() {
             let city = document.getElementById("searchMap").value;
             document.getElementById("map").src =
-                 `https://www.google.com/maps?q=${encodeURIComponent(city)}&output=embed`;
+                `https://www.google.com/maps?q=${city}&output=embed`;
 
         }
         btnOne.addEventListener("click", searchMap);
 
 
+
+        // function searchMap() {
+        //     let apiKey = "c6bb504f44dd412102a8b96ad2089b85";
+        //     let city = document.getElementById("searchMap").value;
+
+        //     let url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
+        //     let options = {
+        //         "method": "GET"
+        //     }
+
+        //     fetch(url, options)
+        //         .then(function (res) {
+        //             return res.json()
+        //         }).then(function (da) {
+        //             let latitude = da[0].lat;
+        //             let longitude = da[0].lon;
+        //             map.src =
+        //                 `https://www.google.com/maps?q=${latitude},${longitude}&output=embed`;
+        //         }).catch(function (error) {
+        //             console.log(error);
+        //         });
+
+        // }
+        // btnOne.addEventListener("click", searchMap);
     </script>
 
 </body>
 
-<body>
-
-
-</body>
 
 </html>
